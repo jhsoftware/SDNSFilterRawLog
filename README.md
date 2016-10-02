@@ -19,11 +19,13 @@ Download the latest release .zip file (32 or 64 bit depending on your OS) from t
 
 ## Usage
 
-```FilterRawLog zone   <simple-dns-plus-database-file> <raw-log-file> <output-file>  
+```
+FilterRawLog zone   <simple-dns-plus-database-file> <raw-log-file> <output-file>  
 FilterRawLog qname  <raw-log-file> <output-file>  
 FilterRawLog qtype  <raw-log-file> <output-file>  
 FilterRawLog fromip <raw-log-file> <output-file>  
-FilterRawLog hour   <raw-log-file> <output-file>```
+FilterRawLog hour   <raw-log-file> <output-file>
+```
 
 Note: The "zone" option only works with a database file from Simple DNS Plus v. 6.0 or later.  
 The other options work with raw log files from Simple DNS Plus v. 5.0 and later.
