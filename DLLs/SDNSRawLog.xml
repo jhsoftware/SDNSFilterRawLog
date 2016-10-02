@@ -1,0 +1,160 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SDNSRawLog
+</name>
+</assembly>
+<members>
+<member name="T:JHSoftware.SDNSRawLog.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:JHSoftware.SDNSRawLog.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:JHSoftware.SDNSRawLog.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:JHSoftware.SDNSRawLog.DomainName">
+ <summary>Immutable object representing a domain name</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.DomainName.Root">
+ <summary>Constant for the root domain name</summary>
+</member>
+<member name="P:JHSoftware.SDNSRawLog.DomainName.DebuggerValue">
+ <summary>For Visual Studio debugger visualization only</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.Equals(JHSoftware.SDNSRawLog.DomainName)">
+ <summary>Compares this domain name with another domain names for equality</summary>
+ <param name="other">The domain name to comare to</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.GetHashCode">
+ <summary>Calculates hash code</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.ToString">
+ <summary>String representation of domain name (not native characters)</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.SegmentCount">
+ <summary>Returns the number of domain name segments (dot-to-dot)</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.EndsWith(JHSoftware.SDNSRawLog.DomainName)">
+ <summary>Checks if a domain name ends with another</summary>
+ <param name="ewDom">Ends-with domain name</param>
+ <remarks>Only checks full domain name segments (dot-to-dot)</remarks>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.FromBytesNT(System.Byte[],System.Int32,System.Int32)">
+ <summary>Extracts a domain name from a byte array - No trailing zero is expected</summary>
+ <param name="ba">The byte array to extract from</param>
+ <param name="FromPos">The position in the buffer to start at</param>
+ <param name="Length">The lenght of the domain name bytes</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.FromBytes(System.Byte[],System.Int32,System.Int32)">
+ <summary>Extracts a domain name from a byte array - Domain name in buffer much have trailing zero</summary>
+ <param name="ba">The byte array to extract from</param>
+ <param name="FromPos">The position in the buffer to start at</param>
+ <param name="Length">The lenght of the domain name bytes</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.CopyBytesTo(System.Byte[],System.Int32)">
+ <summary>Copies to network byte representation of the domain name to a byte array</summary>
+ <param name="toBA">The byte array to copy to</param>
+ <param name="toPos">The position in the byte array to copy to</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.GetBytes">
+ <summary>Network byte representation of the domain name</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.GetBytesNT">
+ <summary>Network byte representation of the domain name without trailing zero</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.op_Equality(JHSoftware.SDNSRawLog.DomainName,JHSoftware.SDNSRawLog.DomainName)">
+ <summary>Compares two domain names for equality</summary>
+ <param name="d1">First domain name</param>
+ <param name="d2">Second domain name</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.op_Inequality(JHSoftware.SDNSRawLog.DomainName,JHSoftware.SDNSRawLog.DomainName)">
+ <summary>Compares two domain names for inequality</summary>
+ <param name="d1">First domain name</param>
+ <param name="d2">Second domain name</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.op_Concatenate(JHSoftware.SDNSRawLog.DomainName,JHSoftware.SDNSRawLog.DomainName)">
+ <summary>Concatenates two domain names</summary>
+ <param name="d1">First domain name</param>
+ <param name="d2">Second domain name</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.CompareTo(JHSoftware.SDNSRawLog.DomainName)">
+ <summary>Compares one domain name to another</summary>
+ <param name="other">The domain name to compare to</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.TryParse(System.String,JHSoftware.SDNSRawLog.DomainName@)">
+ <summary>Attempts to parse a domain name from a string</summary>
+ <param name="s">The string to parse from</param>
+ <param name="Result">The resulting domain name</param>
+ <returns>Boolean indicating if the domain name was parsed succesfully</returns>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.Parse(System.String)">
+ <summary>Parses a domain name from a string</summary>
+ <param name="s">The string to parse from</param>
+ <returns>The resulting domain name</returns>
+ <exception cref="T:System.ArgumentException">If the string could not be parsed into a domain name</exception>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.Parent">
+ <summary>Returns a domain name's parent name</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.DomainName.GetSegments(System.Int32,System.Int32)">
+ <summary>Returns specific segments (dot-to-dot) of a domain name</summary>
+ <param name="index">The first segment to retreive (zero based)</param>
+ <param name="count">The number of segments to retrieve</param>
+</member>
+<member name="T:JHSoftware.SDNSRawLog.RawLog">
+ <summary>Provides an enumerable (for-each) collection of entries in a Simple DNS Plus raw log file (.sdraw)</summary>
+ <remarks>Rather then reading the whole log file intro memory at once, it is read sequentially as you move through the collection.
+ This means that a file handle remains open as long the RawLog object exists.</remarks>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.RawLog.#ctor(System.String)">
+ <summary>Opens a raw log file and creates an instances of the RawLog object</summary>
+ <param name="fileName">The full path and file name of the raw log file (.sdraw)</param>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.RawLog.GetEnumerator">
+ <summary>Returns an enumerator for the entries in the log file</summary>
+</member>
+<member name="M:JHSoftware.SDNSRawLog.RawLog.GetEnumerator1">
+ <summary>Returns an enumerator for the entries in the log file</summary>
+</member>
+<member name="T:JHSoftware.SDNSRawLog.RawLog.Request">
+ <summary>An object representing a single DNS request in a Simple DNS Plus raw log file</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.FromIP">
+ <summary>The IP address that the DNS request came from</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.Time">
+ <summary>Time request was received since midnight</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.OpCode">
+ <summary>The DNS request OpCode</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.RD">
+ <summary>The DNS request RD (Recursion Desired) flag</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.QName">
+ <summary>The requested domain name</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.QType">
+ <summary>The query type (numeric)</summary>
+</member>
+<member name="F:JHSoftware.SDNSRawLog.RawLog.Request.QClass">
+ <summary>the query class (numeric)</summary>
+</member>
+<member name="P:JHSoftware.SDNSRawLog.RawLog.Request.QTypeName">
+ <summary>The query type (alphanumeric)</summary>
+</member>
+<member name="P:JHSoftware.SDNSRawLog.RawLog.Request.QClassName">
+ <summary>the query class (alphanumeric)</summary>
+</member>
+</members>
+</doc>
