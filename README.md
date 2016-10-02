@@ -7,17 +7,17 @@ This tool uses and includes the ["Simple DNS Plus - Raw Log Library"](https://gi
 Simple DNS Plus raw log files are enabled in the Options dialog / Logging / Log Files section.
 The raw log files are then found in the Simple DNS Plus log files directory (See Options dialog / Logging section). 
 
-## Requirements
+### Requirements
 
 Microsoft .NET Framework v. 2.0 - 3.5
 
 Can be re-compiled for later .NET versions without any source code changes.
 
-## Installation
+### Download / Installation
 
-Download the latest release .zip file (32 or 64 bit depending on your OS) from the *Releases* tab above, unzip the file.
+Download the latest binary from <https://github.com/jhsoftware/SDNSFilterRawLog/releases> (32 or 64 bit depending on your OS) and unzip the file.
 
-## Usage
+### Usage
 
 ```
 FilterRawLog zone   <simple-dns-plus-database-file> <raw-log-file> <output-file>  
@@ -30,9 +30,13 @@ FilterRawLog hour   <raw-log-file> <output-file>
 Note: The "zone" option only works with a database file from Simple DNS Plus v. 6.0 or later.  
 The other options work with raw log files from Simple DNS Plus v. 5.0 and later.
 
-## Contributing
+### Source code / Git repository
 
-Contributions are most welcome. 
+See <https://github.com/jhsoftware/SDNSFilterRawLog>
 
-Fork the repository, create your feature branch, commit your changes, push, and submit a pull request...
+Contributions are most welcome. Fork the repository, create a branch, commit your changes, push, and submit a pull request.
+Or just e-mail us the changes :-)
 
+### License
+
+See the [LICENSE](LICENSE.md) file
